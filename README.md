@@ -1,4 +1,5 @@
 # daily-dev-trading-lab
+starting date: 24/06/2026
 
 ## Trading Topics
 
