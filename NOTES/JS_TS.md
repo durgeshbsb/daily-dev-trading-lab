@@ -1,0 +1,40 @@
+# 11 june 2026
+
+## closures in js ts
+
+A local variable is a "private" variable defined inside a function.
+A global variable is a "public" variable defined outside a function.
+
+Global variables live until the page is discarded, like when you navigate to another page or close the window.
+Local variables have short lives. They are created when the function is invoked, and deleted when the function is finished.
+
+A closure is a function that has access to the parent scope, after the parent function has closed.
+
+Closures has historically been used to:
+
+Create private variables
+Preserve state between function calls
+Simulate block-scoping before let and const existed
+Implement certain design patterns like currying and memoization
+
+modern js use class instead of closures
+
+
+# 15 june 2026
+
+## aync vs callback vs promises
+
+- There are seven primitive data types in JavaScript (Number, BigInt, String, Boolean, Null, Undefined and Symbol) and then object
+Seven of them are called “primitive”, because their values contain only a single thing
+
+# 18 june 2026
+
+Prototypes are the mechanism by which JavaScript objects inherit features from one another.
+Every object in JavaScript has a built-in property, which is called its prototype. The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
+prototype is like class also
+
+> type casting  : Number() -> Type(x) just like in php Type x or String x
+> type Coercion is implicit(automatic) while type conversion is explicit(manual). both do same thing
+
+# 24 june 2026
+

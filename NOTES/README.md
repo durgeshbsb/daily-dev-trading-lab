@@ -1,5 +1,5 @@
 # daily-dev-trading-lab
-starting date: 24/06/2026
+starting date: 26/06/2026
 
 ## Trading Topics
 
@@ -158,3 +158,42 @@ Focus on practical + quant + psychology.
 19. ESBuild/Vite
 20. Package publishing
 21. Build tiny library
+
+
+# php
+
+PHP internals overview
+Memory management
+Opcache/JIT
+Composer deep dive
+Autoloading PSR-4
+Traits vs interfaces
+Reflection API
+Week 2 — Advanced Architecture
+SOLID in PHP
+Design patterns
+Dependency injection container
+Middleware pipeline
+Event-driven architecture
+Hexagonal architecture
+DTOs + value objects
+Week 3 — Performance + Modern PHP
+Fibers
+Async PHP (ReactPHP/Swoole)
+RoadRunner vs PHP-FPM
+Static analysis (PHPStan/Psalm)
+PHPUnit/Pest advanced
+Build mini package
+Optimize Laravel app deeply
+
+
+curl 'https://www.aljazeera.com/graphql?wp-site=aje&operationName=ArchipelagoBreakingTickerQuery&variables=%7B%7D&extensions=%7B%7D' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: https://www.aljazeera.com/news/liveblog/2026/6/12/iran-war-live-trump-claims-tehran-deal-approved-cancels-new-strikes' \
+  -H 'sec-ch-ua: "Chromium";v="141", "Not?A_Brand";v="8"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'wp-site: aje' \
+  -H 'original-domain: www.aljazeera.com' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36' \
+  -H 'accept: */*' \
+  -H 'content-type: application/json'

@@ -1,0 +1,26 @@
+{
+    "name": "letsee/letsee",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "root",
+            "email": "root@root.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Letsee\\Admin\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Letsee\\Admin\\Providers\\AdminServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "dev"
+}

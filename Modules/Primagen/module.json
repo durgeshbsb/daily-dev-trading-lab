@@ -1,0 +1,11 @@
+{
+    "name": "Primagen",
+    "alias": "primagen",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Primagen\\Providers\\PrimagenServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Fireship",
+    "alias": "fireship",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Fireship\\Providers\\FireshipServiceProvider"
+    ],
+    "files": []
+}
