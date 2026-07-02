@@ -56,6 +56,321 @@ use async/await and try-catch statements, or .catch() errors in promises.
 > assertion errors is build in module for testing errors
 
 
+# 27 june 2026
+module system in nodejs projects
+with and without nestjs
+- in nodejs we do it manually but in nestjs it is provided by default.
+in module.js
+module.exports = {
+    prefix: '/users',
+    router: require('./routes'),
+};
+in app.js
+const users = require('./modules/users');
+const auth = require('./modules/auth');
+
+app.use(users.prefix, users.router);
+app.use(auth.prefix, auth.router);
+
+## Data structures in js
+
+- everything is object except null and undefined.
+- undefined indicates the absence of a value, while null indicates the absence of an object 
+- js has almost all dsa in it https://github.com/trekhleb/javascript-algorithms
+- Arrays, Maps, Sets, Json
+> Maps are unique key objects, , Sets are unique value Arrays.
+
+# JavaScript Data Structures Cheat Sheet
+
+| Data Structure | Used For                            | Stores          | Ordered           | Iterable        | Key Characteristics                |
+| -------------- | ----------------------------------- | --------------- | ----------------- | --------------- | ---------------------------------- |
+| **Array**      | Lists, collections, queues, stacks  | Any values      | ✅ Yes             | ✅ Yes           | Indexed, dynamic size              |
+| **Object**     | Configuration, JSON, records        | Key-value pairs | ❌ No              | ❌ No (directly) | Keys are strings/symbols           |
+| **Map**        | Dictionaries, caches, lookup tables | Key-value pairs | ✅ Insertion order | ✅ Yes           | Keys can be any type               |
+| **WeakMap**    | Private object metadata             | Object → Value  | ❌ No              | ❌ No            | Keys are weakly referenced objects |
+| **Set**        | Unique values, removing duplicates  | Unique values   | ✅ Insertion order | ✅ Yes           | No duplicate values                |
+| **WeakSet**    | Track object references             | Objects only    | ❌ No              | ❌ No            | Weakly referenced objects          |
+| **Stack**      | Undo, browser history, recursion    | Any values      | LIFO              | Depends         | Last In First Out                  |
+
+---
+
+# 1. Array
+
+### Used For
+
+* Product lists
+* User lists
+* Orders
+* Comments
+* Queue
+* Stack
+
+---
+
+## Methods
+
+| Method            | What it does                | Example                      |
+| ----------------- | --------------------------- | ---------------------------- |
+| `push()`          | Add at end                  | `arr.push(5)`                |
+| `pop()`           | Remove last                 | `arr.pop()`                  |
+| `shift()`         | Remove first                | `arr.shift()`                |
+| `unshift()`       | Add at beginning            | `arr.unshift(1)`             |
+| `splice()`        | Insert/remove elements      | `arr.splice(2,1)`            |
+| `slice()`         | Copy part of array          | `arr.slice(1,3)`             |
+| `concat()`        | Merge arrays                | `arr.concat(arr2)`           |
+| `join()`          | Convert to string           | `arr.join(",")`              |
+| `includes()`      | Check value                 | `arr.includes(5)`            |
+| `indexOf()`       | Find first index            | `arr.indexOf(5)`             |
+| `lastIndexOf()`   | Find last index             | `arr.lastIndexOf(5)`         |
+| `find()`          | Find first matching element | `arr.find(x=>x.id===1)`      |
+| `findIndex()`     | Find index                  | `arr.findIndex(x=>x>10)`     |
+| `findLast()`      | Find last matching element  | `arr.findLast(x=>x>10)`      |
+| `findLastIndex()` | Find last index             | `arr.findLastIndex(x=>x>10)` |
+| `map()`           | Transform items             | `arr.map(x=>x*2)`            |
+| `filter()`        | Filter items                | `arr.filter(x=>x>10)`        |
+| `reduce()`        | Reduce to one value         | `arr.reduce((a,b)=>a+b)`     |
+| `reduceRight()`   | Reduce from right           | `arr.reduceRight(...)`       |
+| `forEach()`       | Loop                        | `arr.forEach(console.log)`   |
+| `some()`          | Any match?                  | `arr.some(x=>x>5)`           |
+| `every()`         | All match?                  | `arr.every(x=>x>5)`          |
+| `sort()`          | Sort array                  | `arr.sort()`                 |
+| `reverse()`       | Reverse array               | `arr.reverse()`              |
+| `flat()`          | Flatten array               | `arr.flat()`                 |
+| `flatMap()`       | Map + flatten               | `arr.flatMap(...)`           |
+| `fill()`          | Fill values                 | `arr.fill(0)`                |
+| `copyWithin()`    | Copy inside array           | `arr.copyWithin(0,2)`        |
+| `keys()`          | Iterator of indexes         | `arr.keys()`                 |
+| `values()`        | Iterator of values          | `arr.values()`               |
+| `entries()`       | Iterator of index/value     | `arr.entries()`              |
+| `at()`            | Access by index             | `arr.at(-1)`                 |
+| `toSorted()`      | Immutable sort              | `arr.toSorted()`             |
+| `toReversed()`    | Immutable reverse           | `arr.toReversed()`           |
+| `toSpliced()`     | Immutable splice            | `arr.toSpliced()`            |
+| `with()`          | Replace element immutably   | `arr.with(2,100)`            |
+
+---
+
+# 2. Object
+
+### Used For
+
+* User profile
+* API response
+* Configuration
+* JSON
+
+```js
+const user = {
+    id: 1,
+    name: "John"
+}
+```
+
+---
+
+## Methods
+
+| Method                       | Purpose             | Example                         |
+| ---------------------------- | ------------------- | ------------------------------- |
+| `Object.keys()`              | Get keys            | `Object.keys(user)`             |
+| `Object.values()`            | Get values          | `Object.values(user)`           |
+| `Object.entries()`           | Get key/value pairs | `Object.entries(user)`          |
+| `Object.fromEntries()`       | Reverse entries     | `Object.fromEntries(arr)`       |
+| `Object.assign()`            | Merge objects       | `Object.assign({},a,b)`         |
+| `Object.create()`            | Create object       | `Object.create(proto)`          |
+| `Object.freeze()`            | Make immutable      | `Object.freeze(obj)`            |
+| `Object.seal()`              | Prevent add/remove  | `Object.seal(obj)`              |
+| `Object.hasOwn()`            | Check property      | `Object.hasOwn(obj,"name")`     |
+| `Object.is()`                | Compare values      | `Object.is(a,b)`                |
+| `Object.defineProperty()`    | Define property     | `Object.defineProperty(...)`    |
+| `Object.getPrototypeOf()`    | Get prototype       | `Object.getPrototypeOf(obj)`    |
+| `Object.setPrototypeOf()`    | Set prototype       | `Object.setPrototypeOf(obj,p)`  |
+| `Object.preventExtensions()` | Stop adding props   | `Object.preventExtensions(obj)` |
+| `delete`                     | Remove property     | `delete obj.age`                |
+
+---
+
+# 3. Map
+
+### Used For
+
+* Cache
+* Database lookup
+* Session store
+* Fast lookup
+
+```js
+const map = new Map();
+```
+
+---
+
+## Methods
+
+| Method      | Purpose            | Example            |
+| ----------- | ------------------ | ------------------ |
+| `set()`     | Add/update         | `map.set("id",1)`  |
+| `get()`     | Get value          | `map.get("id")`    |
+| `has()`     | Exists?            | `map.has("id")`    |
+| `delete()`  | Remove             | `map.delete("id")` |
+| `clear()`   | Remove all         | `map.clear()`      |
+| `keys()`    | Keys iterator      | `map.keys()`       |
+| `values()`  | Values iterator    | `map.values()`     |
+| `entries()` | Key/value iterator | `map.entries()`    |
+| `forEach()` | Loop               | `map.forEach(...)` |
+| `size`      | Number of entries  | `map.size`         |
+
+---
+
+# 4. WeakMap
+
+### Used For
+
+* Private class data
+* DOM metadata
+* Hidden object information
+
+---
+
+## Methods
+
+| Method     | Purpose    | Example            |
+| ---------- | ---------- | ------------------ |
+| `set()`    | Add value  | `wm.set(obj,data)` |
+| `get()`    | Read value | `wm.get(obj)`      |
+| `has()`    | Exists?    | `wm.has(obj)`      |
+| `delete()` | Remove     | `wm.delete(obj)`   |
+
+No iteration.
+
+---
+
+# 5. Set
+
+### Used For
+
+* Remove duplicates
+* Unique IDs
+* Tags
+* Permissions
+
+```js
+const set = new Set();
+```
+
+---
+
+## Methods
+
+| Method      | Purpose         | Example            |
+| ----------- | --------------- | ------------------ |
+| `add()`     | Add value       | `set.add(10)`      |
+| `delete()`  | Remove          | `set.delete(10)`   |
+| `has()`     | Exists?         | `set.has(10)`      |
+| `clear()`   | Remove all      | `set.clear()`      |
+| `keys()`    | Iterator        | `set.keys()`       |
+| `values()`  | Iterator        | `set.values()`     |
+| `entries()` | Iterator        | `set.entries()`    |
+| `forEach()` | Loop            | `set.forEach(...)` |
+| `size`      | Number of items | `set.size`         |
+
+---
+
+# 6. WeakSet
+
+### Used For
+
+* Store visited objects
+* DOM tracking
+* Circular reference detection
+
+---
+
+## Methods
+
+| Method     | Purpose    | Example          |
+| ---------- | ---------- | ---------------- |
+| `add()`    | Add object | `ws.add(obj)`    |
+| `delete()` | Remove     | `ws.delete(obj)` |
+| `has()`    | Exists?    | `ws.has(obj)`    |
+
+No iteration.
+
+---
+
+# 7. Stack (Custom)
+
+### Used For
+
+* Browser history
+* Undo/Redo
+* Function call stack
+* Expression evaluation
+* DFS (Depth-First Search)
+
+Usually implemented with an `Array`.
+
+```js
+const stack = [];
+```
+
+---
+
+## Methods
+
+| Method      | Purpose             | Example                                     |
+| ----------- | ------------------- | ------------------------------------------- |
+| `push()`    | Push item           | `stack.push(10)`                            |
+| `pop()`     | Remove top          | `stack.pop()`                               |
+| `peek()`    | View top (custom)   | `stack.at(-1)` or `stack[stack.length - 1]` |
+| `isEmpty()` | Empty? (custom)     | `stack.length===0`                          |
+| `size()`    | Count (custom)      | `stack.length`                              |
+| `clear()`   | Remove all (custom) | `stack.length = 0`                          |
+
+---
+
+# Which One Should You Use?
+
+| Situation                    | Best Choice | Example                                                 |
+| ---------------------------- | ----------- | ------------------------------------------------------- |
+| List of products             | **Array**   | `[{id:1},{id:2}]`                                       |
+| User profile                 | **Object**  | `{name:"John", age:25}`                                 |
+| Fast lookup by any key type  | **Map**     | Cache by object or ID                                   |
+| Private metadata for objects | **WeakMap** | Associate hidden data with DOM nodes or class instances |
+| Remove duplicates            | **Set**     | `[1,2,2,3] → Set`                                       |
+| Track processed objects      | **WeakSet** | Mark visited objects during traversal                   |
+| Undo/Redo, browser history   | **Stack**   | Push actions, pop last action                           |
+
+## Quick Decision Guide
+
+| Need                                                          | Use       |
+| ------------------------------------------------------------- | --------- |
+| Ordered collection of items                                   | `Array`   |
+| Structured record with named fields                           | `Object`  |
+| Dictionary with keys of any type                              | `Map`     |
+| Unique values                                                 | `Set`     |
+| Hidden metadata tied to object lifetimes                      | `WeakMap` |
+| Track object membership without preventing garbage collection | `WeakSet` |
+| Last-in, first-out processing                                 | `Stack`   |
+
+# 29 june 2026
+# Async programming
+Asynchronous code means that things can happen independently of the main program flow, async functions in JavaScript are processed in the background without blocking other requestsq
+
+# 1 jul 2026
+Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be able to be responsive to other events while that task runs, rather than having to wait until that task has finished. 
+
+async: 
+1. promises
+2. async/ await
+3. callbacks
+4. setTimeout
+5. setInterval
+6. setImmediate
+7. process.nextTick
+
+
+
 # 2 july 2026
 ## worker threads (multi threading)
 - bullmq, Piscina are used instead of node:worker_threads

@@ -130,9 +130,6 @@ adding these things in composer.json:
     },
 
 
-
-
-
 # 2 july 2026
 ## Laravel events and concurrency\
 
@@ -147,3 +144,7 @@ $result->output();
 $result->errorOutput();
 $result->exitCode();
 - with input Process::input("david")->run("where");
+
+---
+and also we have can have every type of file inside each module with just a command
+
