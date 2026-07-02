@@ -1,5 +1,5 @@
-# Date: 26 May 2026 1. Service container internals
 
+# Date: 26 May 2026 1. Service container internals
 Laravel's api flow journey
 request => apache/nginx => public/index.php(checks maintenance mode, loads the autoloader, bootstrap the bootstrap/app.php and handle the request) => create instance of laravel app => HTTP kernel or the console kernel, using the handleRequest or handleCommand methods of the application instance configure error handling, configure logging, detect the application environment => service providers bootstrapping all of the framework's various components, such as the database, queue, validation, and routing components => middleware => route => controller method => response => middleware => HTTP kernel's handle method returns the response object to the handleRequest of the application instance, and this method calls the send method on the returned response. The send method sends the response content to the user's web browser.
 
@@ -128,3 +128,22 @@ adding these things in composer.json:
             ]
         }
     },
+
+
+
+
+
+# 2 july 2026
+## Laravel events and concurrency\
+
+## Laravel Processes
+- Illuminate\Support\Facades\Process
+- for running terminal commands and scripts
+- Process::run() will give object which will have funtions:
+$result->command();
+$result->successful();
+$result->failed();
+$result->output();
+$result->errorOutput();
+$result->exitCode();
+- with input Process::input("david")->run("where");

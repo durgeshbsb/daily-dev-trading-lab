@@ -54,3 +54,75 @@ use async/await and try-catch statements, or .catch() errors in promises.
 > system errors usually occur when an application violates an operating system constraint. For example, a system error will occur if an application attempts to read a file that does not exist.
 > User Specified Errors is created by extending the base Error object like custom errors for more verbosity
 > assertion errors is build in module for testing errors
+
+
+# 2 july 2026
+## worker threads (multi threading)
+- bullmq, Piscina are used instead of node:worker_threads
+| Tool               | Analogy                        | Responsibility                                                                                |
+| ------------------ | ------------------------------ | --------------------------------------------------------------------------------------------- |
+| **BullMQ**         | Receptionist / Project Manager | Keeps a list of jobs, schedules them, retries failures, assigns work to workers.              |
+| **BullMQ Worker**  | Employee                       | Takes one job from the queue and decides how to perform it.                                   |
+| **worker_threads** | Specialist assistant           | Helps with one CPU-intensive task in parallel.                                                |
+| **Piscina**        | Team manager                   | Maintains a pool of specialist assistants so you don't have to hire a new one for every task. |
+
+API
+  │
+  ▼
+BullMQ Queue
+  │
+  ▼
+BullMQ Worker
+  │
+  ├── If job is I/O-bound (DB, email, HTTP)
+  │      └── Execute directly
+  │
+  └── If job is CPU-bound
+         └── Piscina
+                │
+                ▼
+          worker_threads
+
+### Worker threads:
+- Worker is for creating new threads
+- parentPort is for workers files to communicate back to main file where worker called
+- workerData is for giving initial configuration while creating a worker 
+- myWorker.postMessage("david") is for sending arguments or calling to initiate the function process
+- myWorker.on("message", () => {}) message, error, exit, online
+- isMainthread will be if it's in main thread or worker thread
+- threadId will give id for particular worker
+- MessageChannel , MessagePort
+
+on main.js
+let myWorker = new Worker("./download-worker.js", import.meta.url,
+{
+   type: "module",
+   fileName: "data.csv",
+   name: "david"
+}
+);
+myWorker.postMessage("david");
+ myWorker.on("message", () => {}) message, error, exit, online
+and in worker.js
+parentPort.on("message", async (data) => {});
+
+### BullMQ
+
+
+### Piscina
+
+
+
+
+
+
+## events
+import EventEmitter from "node:events";
+
+const emitter = new EventEmitter();
+
+emitter.on("start", () => {});
+emitter.removeAllListeners("start",() => {});
+emitter.emit("start", arguments);
+emitter.eventNames();
+emitter.once("start, () => {});
