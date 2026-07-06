@@ -426,8 +426,16 @@ parentPort.on("message", async (data) => {});
 
 ### Piscina
 
+SET GLOBAL general_log = 'ON';
+SET GLOBAL log_output = 'TABLE';
 
 
+
+
+shivam kumar policy bazaar sector 44 gurgaon
+
+
+https://tccms.trai.gov.in/Queries.aspx?cid=1
 
 
 
