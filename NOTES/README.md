@@ -197,3 +197,11 @@ curl 'https://www.aljazeera.com/graphql?wp-site=aje&operationName=ArchipelagoBre
   -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36' \
   -H 'accept: */*' \
   -H 'content-type: application/json'
+
+
+  1. Javascript/Typescript
+  2. PHP
+  3. Laravel
+  4. NodeJS/NestJS
+  5. MySQL
+  6. React
