@@ -24,12 +24,12 @@ SHOW DATABASES;
 
 SQL data types can be broadly divided into the following categories:
 
-Numeric data types such as INT, TINYINT, BIGINT, FLOAT, REAL, etc.
-Date and Time data types such as DATE, TIME, DATETIME, etc.
-Character and String data types such as CHAR, VARCHAR, TEXT, etc.
-Unicode character string data types such as NCHAR, NVARCHAR, NTEXT, etc.
-Binary data types such as BINARY, VARBINARY, etc.
-Miscellaneous data types such as CLOB, BLOB, XML, CURSOR, TABLE, etc.
+1. Numeric data types such as INT, TINYINT, BIGINT, FLOAT, REAL, etc.
+2. Date and Time data types such as DATE, TIME, DATETIME, etc.
+3. Character and String data types such as CHAR, VARCHAR, TEXT, etc.
+4. Unicode character string data types such as NCHAR, NVARCHAR, NTEXT, etc.
+5. Binary data types such as BINARY, VARBINARY, etc.
+6. Miscellaneous data types such as CLOB, BLOB, XML, CURSOR, TABLE, etc.
 
 # 6 july 2026
 
@@ -84,6 +84,27 @@ alter table table_name drop column column_name;
 sql constraints
 subquery
 indexing
+
+# 7 july 2026
+Alter is Data defination language(DDL) for changing the table schema
+and Update is Data manipulation language(DML) for changing the table data
+
+alter add, modify column, drop column, rename column, add primary key, add foreign key, add constraint, drop constraint
+
+
+- where is used before grouping or aggregation and having is used after grouping
+## sub query
+
+## normalization
+Normalization organizes relational data to minimize redundancy and prevent update/insert/delete anomalies by splitting tables based on dependencies while preserving meaning.
+
+1NF: Each column contains atomic values, and there are no repeating groups.
+2NF: Meets 1NF and removes partial dependencies on a composite primary key.
+3NF: Meets 2NF and removes transitive dependencies.
+BCNF: Every determinant must be a candidate key.
+4NF: Removes multi-valued dependencies.
+5NF (PJNF): Removes join dependencies to avoid data redundancy.
+
 
 
 

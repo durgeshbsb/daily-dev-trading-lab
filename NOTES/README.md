@@ -54,6 +54,7 @@ Focus on practical + quant + psychology.
 19. GraphQL
 20. Microservices
 21. SaaS architecture
+- TDD, Solid, Pest
 
 ---
 
@@ -205,3 +206,6 @@ curl 'https://www.aljazeera.com/graphql?wp-site=aje&operationName=ArchipelagoBre
   4. NodeJS/NestJS
   5. MySQL
   6. React
+
+
+elastic search pending
