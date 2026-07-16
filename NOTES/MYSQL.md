@@ -2,6 +2,11 @@ https://www.geeksforgeeks.org/sql/sql-cheat-sheet/
 
 https://www.dbvis.com/wp-content/uploads/2024/04/SQL-Cheat-Sheet.pdf
 
+https://www.geeksforgeeks.org/sql/sql-interview-questions/
+
+https://skphd.medium.com/advanced-sql-interview-questions-and-answers-307a5333d02e
+https://datavidhya.com/blog/sql-data-engineering-interview-questions/
+
 # 11 june 2026
 
 ## indexing

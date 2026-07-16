@@ -1,5 +1,29 @@
 # daily-dev-trading-lab
 starting date: 26/06/2026
+target confidence level 80%
+
+# 16 july 2026: confidence level:
+1. PHP: 5%
+2. JS/TS: 10%
+3. Laravel: 5%
+4. NodeJS: 0%
+5. React: 0%
+6. AI: 0%
+7. MySQL: 20%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Trading Topics
 

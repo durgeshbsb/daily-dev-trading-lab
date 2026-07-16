@@ -1,3 +1,6 @@
+https://github.com/zsoro2/php-interview-questions#interface-vs-abstract-class-tell-me-the-diference
+
+
 # 11 jun 2026
 
 PSR and php internals
