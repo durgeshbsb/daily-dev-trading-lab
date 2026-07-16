@@ -148,3 +148,7 @@ $result->exitCode();
 ---
 and also we have can have every type of file inside each module with just a command
 
+
+# 9 july 2026
+queue connection database sync redis
+

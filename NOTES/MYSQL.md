@@ -98,13 +98,57 @@ alter add, modify column, drop column, rename column, add primary key, add forei
 ## normalization
 Normalization organizes relational data to minimize redundancy and prevent update/insert/delete anomalies by splitting tables based on dependencies while preserving meaning.
 
-1NF: Each column contains atomic values, and there are no repeating groups.
-2NF: Meets 1NF and removes partial dependencies on a composite primary key.
+https://www.datacamp.com/tutorial/normalization-in-sql
+1NF: Each column contains atomic values, and there are no repeating groups.(no comma seperated values in column - instead use seperate table)
+2NF: Meets 1NF and removes partial dependencies on a composite primary key. (
+
+
+    
+)
 3NF: Meets 2NF and removes transitive dependencies.
 BCNF: Every determinant must be a candidate key.
 4NF: Removes multi-valued dependencies.
 5NF (PJNF): Removes join dependencies to avoid data redundancy.
 
 
+# 9 july 2026
+DDL (Data Definition Language): CREATE, ALTER, DROP, TRUNCATE.
+DML (Data Manipulation Language): SELECT, INSERT, UPDATE, DELETE.
+DCL (Data Control Language): GRANT, REVOKE.
+TCL (Transaction Control Language): COMMIT, ROLLBACK, SAVEPOINT.
 
 
+Arithmetic Operators: +, -, *, /, %
+Comparison Operators: =, !=, <>, >, <, >=, <=
+Logical Operators: AND, OR, NOT
+Set Operators: UNION, INTERSECT, EXCEPT
+Special Operators: BETWEEN, IN, LIKE, IS NULL
+Concatenation Operators:|| (Oracle, PostgreSQL) or + (SQL Server) to combine strings.
+
+
+# 10 july 2026
+mysql prepared statement.
+
+# 14 july 2026
+mysql ACID and functions
+
+# 16 july 2026
+common table expressions(CTE)
+
+A Common Table Expression (CTE) is a temporary, named result set in SQL that you can reference within a single , , , or  statement. Think of it as a temporary virtual table or a named subquery that exists only for the duration of that specific query execution. [1, 2, 3, 4]  
+
+| Feature | CTE | Subquery | Temporary Table  |
+| --- | --- | --- | --- |
+| Scope | Single query execution | Single inline execution | Full database session  |
+| Reusability | Multiple times in the same query | Only where inline-defined | Across multiple separate queries  |
+| Readability | High (Top-down execution flow) | Low (Nested, inside-out flow) | Medium (Requires explicit creation/cleanup)  |
+| Indexing | No index support | No index support | Supports indexes and constraints  |
+| Best For | Code clean-up and recursion | Simple  /  filters | Massive datasets requiring optimization  |
+
+
+window function
+
+offset == array index
+
+((100*5 + 15*20)/115).toFixed(2)
+round((100*5 + 15*20)/115 , 2)
