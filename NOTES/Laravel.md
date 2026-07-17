@@ -152,6 +152,10 @@ and also we have can have every type of file inside each module with just a comm
 # 9 july 2026
 queue connection database sync redis
 
+# 11 july 2026
+ php artisan list for all commands
+ 
+
 # 17 july 2026
 
 Laravel Cache:
@@ -160,3 +164,4 @@ $lock->get() // true or false
 
 
 calling apis in artisan:
+
