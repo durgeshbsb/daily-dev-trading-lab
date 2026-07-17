@@ -152,3 +152,11 @@ and also we have can have every type of file inside each module with just a comm
 # 9 july 2026
 queue connection database sync redis
 
+# 17 july 2026
+
+Laravel Cache:
+$lock = Cache::lock("string",10); //10 seconds
+$lock->get() // true or false
+
+
+calling apis in artisan:

@@ -2,6 +2,24 @@
 starting date: 26/06/2026
 target confidence level 80%
 
+# How you practice:
+1. PHP: exercism
+2. JS/TS: exercism, leetcode
+3. Laravel: projects, open source
+4. NodeJS: projects, open source
+5. React: greatfrontend, projects, open source
+6. AI: 
+7. MySQL: sql-practice, leetcode, exercism
+
+# Target levels:
+1. PHP: 80%
+2. JS/TS: 100%
+3. Laravel: 80%
+4. NodeJS: 80%
+5. React: 50%
+6. AI: 50%
+7. MySQL: 80%
+
 # 16 july 2026: confidence level:
 1. PHP: 5%
 2. JS/TS: 10%

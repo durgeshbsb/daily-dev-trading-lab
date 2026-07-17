@@ -11,3 +11,11 @@ psr provides guidelines on coding style, logger interface, http cache, and more
 
 # 16 july 2026
 Interfaces, Traits classes used in codeigniter
+
+Installing dependencies:
+(require)
+composer require phpunit/phpunit
+composer install --no-dev --optimize-autoloader
+(require-dev)
+composer require --dev phpunit/phpunit
+composer install --optimize-autoloader
