@@ -157,3 +157,30 @@ offset == array index
 
 ((100*5 + 15*20)/115).toFixed(2)
 round((100*5 + 15*20)/115 , 2)
+
+
+# 21 july 2026
+https://medium.com/learning-sql/sql-window-function-visualized-fff1927f00f2
+https://dataschool.com/how-to-teach-people-sql/how-window-functions-work/
+Window functions
+sql window functions allow calc across set of rows that are related to current row.
+window functions 2 types: aggregate and ranking.
+
+common aggregate window functions:
+SUM(): Sums values within a window.
+AVG(): Calculates the average value within a window.
+COUNT(): Counts the rows within a window.
+MAX(): Returns the maximum value in the window.
+MIN(): Returns the minimum value in the window.
+
+common ranking window functions:
+RANK(): Assigns ranks to rows, skipping ranks for duplicates.
+DENSE_RANK(): Assigns ranks to rows without skipping rank numbers for duplicates.
+ROW_NUMBER(): Assigns a unique number to each row in the result set.
+PERCENT_RANK(): Shows the relative rank of a row as a percentage between 0 and 1.
+
+Grouping: This defines the group that each row belongs to (PARTITION BY )
+Order: This sort values within each group and make the window expands incrementally within each group ( ORDER BY)
+Range: This is use to further define the window size, within each group ( ROWS or RANGE )
+
+git for data - dolt

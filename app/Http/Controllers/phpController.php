@@ -20,9 +20,10 @@ class phpController extends Controller
         // dd($request->file->store('images8'));
         // return [1, 2, 3];
         // response('Hello World', 200)
-        //     ->header('Content-Type', 'text/plain');
+        //     ->header('Content-Type', 'text/plain');\
 
-        return Inertia::render('ww3',['props']);
+        // $users = User::
 
+        return Inertia::render('ww3', ['props']);
     }
 }
