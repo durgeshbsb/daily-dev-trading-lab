@@ -8,5 +8,4 @@ emitter.removeAllListeners("error", () => {
 });
 
 // emitter.emit("error", "this is error");
-emitter.
-    console.log(emitter.eventNames());
+// emitter.console.log(emitter.eventNames());

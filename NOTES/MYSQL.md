@@ -161,7 +161,7 @@ round((100*5 + 15*20)/115 , 2)
 
 # 21 july 2026
 https://medium.com/learning-sql/sql-window-function-visualized-fff1927f00f2
-https://dataschool.com/how-to-teach-people-sql/how-window-functions-work/
+https://dataschool.com/how-to-teach-people-sql/how-window-functions-work/ 
 Window functions
 sql window functions allow calc across set of rows that are related to current row.
 window functions 2 types: aggregate and ranking.
@@ -184,3 +184,22 @@ Order: This sort values within each group and make the window expands incrementa
 Range: This is use to further define the window size, within each group ( ROWS or RANGE )
 
 git for data - dolt
+
+# 22 july 2026
+
+
+WITH SequencedRows AS (
+    SELECT *, 
+           ROW_NUMBER() OVER (ORDER BY id) AS rn,
+           COUNT(*) OVER () AS total_rows         -- Gets the total number of rows
+    FROM Seat
+)
+SELECT 
+       CASE 
+           WHEN rn = total_rows AND rn % 2 <> 0 THEN rn  -- If it's the last row AND odd, do nothing
+           WHEN rn % 2 <> 0 THEN rn + 1                  -- If odd (and not last), add 1
+           ELSE rn - 1                                   -- If even, subtract 1
+       END AS id, student
+FROM SequencedRows
+ORDER BY id;
+

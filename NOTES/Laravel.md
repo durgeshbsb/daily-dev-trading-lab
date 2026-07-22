@@ -165,3 +165,24 @@ $lock->get() // true or false
 
 calling apis in artisan:
 
+# 22 july 2026
+using multiple databases in laravel
+in config/database.php connections > driver same or different and env values 
+- eloquent 
+DB::table('users')
+DB::connection('crm')->table('users')
+- Models:
+protected $connection = 'crm';
+- dynamically change connection
+$user = new User();
+$user->setConnection('analytics');
+$user->newQuery()->get();
+OR
+User::on('crm')->get();
+- Migrations:
+php artisan migrate --database=crm
+in migration before up() protected $connection = 'crm';
+
+
+ 
+
